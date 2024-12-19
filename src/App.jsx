@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import Home from './components/Home/Home'
 import Navbar from './components/Navbar/Navbar' 
 import PlayerContainer from './components/PlayerContainer/PlayerContainer'
-import Players from './components/Players/Players'
+import { ToastContainer } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css"
 
 
 function App() {
@@ -47,7 +47,8 @@ function App() {
     <>
       
       <Navbar />
-      <Home />
+      <ToastContainer />
+      
       
       <PlayerContainer handleIsActive = {handleIsActive} IsActive={IsActive} handleSelected={handleSelected}/>
       

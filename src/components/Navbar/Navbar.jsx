@@ -1,8 +1,30 @@
 import logo from '../../assets/logo.png'
-import Home from '../Home/Home';
+import banner from '../../assets/banner-main.png'
+import coin from '../../assets/coinIcon.png'
+import {  useState } from 'react';
+import { toast,Bounce } from 'react-toastify';
 const Navbar = () => {
+
+  const[coins, setCoins] = useState((600))
+
+ const handleAddCredit =()=>{
+  toast.success(`Credit added succesfully`, {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    transition: Bounce,
+    });
+  setCoins(coins + 2500);
+ 
+ }
   return (
-    <div className="navbar bg-base-100">
+    <div>
+      <div className="navbar bg-base-100">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -45,7 +67,22 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <a className="btn">${coins} <img className ="w-10 h-5 " src={coin} alt="" /></a>
+    
+  </div>
+
+    </div>
+   <div className="hero w-11/12 mx-auto rounded-lg mmin-h-screen bg-black bg-[url('/src/assets/bg-shadow.png')]">
+    <div className="hero-content text-center">
+      <div className="max-w-md ">
+        <div>
+          <img src={banner} alt="" />
+        </div>
+        
+        <button onClick={handleAddCredit} className="btn btn-primary bg-[#E7FE29] text-black mt-5">Claim Credit</button>
+       
+      </div>
+    </div>
   </div>
 
 </div>
