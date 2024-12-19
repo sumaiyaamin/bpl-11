@@ -1,4 +1,5 @@
-const Player = ({ player }) => {
+const Player = ({player, handleSelected}) => {
+  
   const {
     image,
     name,
@@ -9,6 +10,11 @@ const Player = ({ player }) => {
     price,
     rating,
   } = player;
+
+
+
+
+
 
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg border p-4 bg-white mx-auto mt-5">
@@ -22,7 +28,7 @@ const Player = ({ player }) => {
         <p className="text-gray-700 text-base">Price: ${price}</p>
         <p className="text-gray-700 text-base">Rating: {rating} / 5</p>
       </div>
-      <button className="btn">Choose Player</button>
+      <button onClick={()=> handleSelected(player)} className="btn">Choose Player</button>
     </div>
   );
 };

@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import './App.css'
 import Home from './components/Home/Home'
@@ -14,6 +13,8 @@ function App() {
     status : "available"
   })
 
+  const[selectedPlayers, setSelectedPlayers] =useState([])
+
   const handleIsActive = (status)=>{
     if(status === "available"){
       setIsActive({
@@ -28,6 +29,18 @@ function App() {
         })
     }
   }
+  const handleSelected = (player) => {
+
+    const alreadyAdded = selectedPlayers.find((p)  => p.id == player.id);
+    if(alreadyAdded){
+      alert("can't add same player!" )
+    }
+    else{
+      const newPlayer = [...selectedPlayers, player];
+    setSelectedPlayers(newPlayer);
+    }
+    
+  }
   
 
   return (
@@ -35,11 +48,11 @@ function App() {
       
       <Navbar />
       <Home />
-      <div className='flex mt-5'>
-        <h1>Available Players</h1>
-      <PlayerContainer handleIsActive = {handleIsActive} IsActive={IsActive} />
-      </div>
-      <Players />
+      
+      <PlayerContainer handleIsActive = {handleIsActive} IsActive={IsActive} handleSelected={handleSelected}/>
+      
+     
+      
       
     </>
   )
