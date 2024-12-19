@@ -17,7 +17,9 @@ const Players = ({handleSelected}) => {
 
   return (
     <div>
+      <h1>Available Players</h1>
       <div className="grid grid-cols-3 gap-3 mx-auto">
+        
         {players.map((player) => (
           <Player 
             key={player.id} 

@@ -1,6 +1,6 @@
 [
   {
-    "playerId": 1,
+    "id": 1,
     "name": "Virat Kohli",
     "country": "India",
     "image": "https://i.ibb.co.com/JrF28tS/virat-kohli.jpg",
@@ -11,7 +11,7 @@
     "rating": 4.5
   },
   {
-    "playerId": 2,
+    "id": 2,
     "name": "Steve Smith",
     "country": "Australia",
     "image": "https://i.ibb.co.com/3SBx5zb/steven-smith.jpg",
@@ -22,7 +22,7 @@
     "rating": 4.7
   },
   {
-    "playerId": 3,
+    "id": 3,
     "name": "Kane Williamson",
     "country": "New Zealand",
     "image": "https://i.ibb.co.com/86YhsxC/Kane-Williamson.jpg",
@@ -33,7 +33,7 @@
     "rating": 4.6
   },
   {
-    "playerId": 4,
+    "id": 4,
     "name": "Ben Stokes",
     "country": "England",
     "image": "https://i.ibb.co.com/L9fwyzf/Ben-Stokes.jpg",
@@ -44,7 +44,7 @@
     "rating": 4.8
   },
   {
-    "playerId": 5,
+    "id": 5,
     "name": "Rashid Khan",
     "country": "Afghanistan",
     "image": "https://i.ibb.co.com/cJrDz8b/Khan-rashid.webp",
@@ -55,7 +55,7 @@
     "rating": 4.9
   },
   {
-    "playerId": 6,
+    "id": 6,
     "name": "Jasprit Bumrah",
     "country": "India",
     "image": "https://i.ibb.co.com/2svK0V7/Jasprit-Bumrah.jpg",
@@ -66,7 +66,7 @@
     "rating": 4.7
   },
   {
-    "playerId": 7,
+    "id": 7,
     "name": "Trent Boult",
     "country": "New Zealand",
     "image": "https://i.ibb.co.com/TWTXzcb/Trent-Boult.jpg",
@@ -77,7 +77,7 @@
     "rating": 4.6
   },
   {
-    "playerId": 8,
+    "pid": 8,
     "name": "David Warner",
     "country": "Australia",
     "image": "https://i.ibb.co.com/wr67Jjz/David-Warner.jpg",
@@ -88,7 +88,7 @@
     "rating": 4.5
   },
   {
-    "playerId": 9,
+    "id": 9,
     "name": "Quinton de Kock",
     "country": "South Africa",
     "image": "https://i.ibb.co.com/q1vST8S/quinton-de-kock.jpg",
@@ -99,7 +99,7 @@
     "rating": 4.4
   },
   {
-    "playerId": 10,
+    "id": 10,
     "name": "Andre Russell",
     "country": "West Indies",
     "image": "https://i.ibb.co.com/ZLh1X9v/Andre-Russell.jpg",
@@ -110,7 +110,7 @@
     "rating": 4.8
   },
   {
-    "playerId": 11,
+    "id": 11,
     "name": "Kagiso Rabada",
     "country": "South Africa",
     "image": "https://i.ibb.co.com/nDhGrfq/Kagiso-Rabada.jpg",
@@ -121,7 +121,7 @@
     "rating": 4.7
   },
   {
-    "playerId": 12,
+    "id": 12,
     "name": "Shakib Al Hasan",
     "country": "Bangladesh",
     "image": "https://i.ibb.co.com/FgGmYmb/Shakib.webp",

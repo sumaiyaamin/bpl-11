@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar/Navbar' 
 import PlayerContainer from './components/PlayerContainer/PlayerContainer'
-import { ToastContainer } from 'react-toastify'
+import { ToastContainer ,toast,Bounce} from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
 
 
@@ -33,11 +33,34 @@ function App() {
 
     const alreadyAdded = selectedPlayers.find((p)  => p.id == player.id);
     if(alreadyAdded){
-      alert("can't add same player!" )
+      toast.error('Player Already Selected!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+        });
+      
     }
     else{
+      
       const newPlayer = [...selectedPlayers, player];
     setSelectedPlayers(newPlayer);
+    toast.info(`${player.name} added successfully`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+      });
     }
     
   }
@@ -50,7 +73,7 @@ function App() {
       <ToastContainer />
       
       
-      <PlayerContainer handleIsActive = {handleIsActive} IsActive={IsActive} handleSelected={handleSelected}/>
+      <PlayerContainer handleIsActive = {handleIsActive} IsActive={IsActive} handleSelected={handleSelected} selectedPlayers={selectedPlayers}/>
       
      
       
